@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<div class="container" align="center">
+	<h1 align="center" style="padding-top:100px; font-family: 'Raleway', sans-serif; color: dark blue;">Password Generator</h1>
+	<h3 align="center" style="padding-top:10px; padding-bottom:25px; font-family: 'Open Sans', sans-serif; color: dark blue;">Create awesome passwords with just one click!</h3>
+	<hr>
+	<form action="{% url 'password' %}"> 
+		<label style="font-family: 'Lato', sans-serif; font-size: 20px; padding-top: 10px;">Select your password length : </label>
+		<select name="length">
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8" selected="selected">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+		</select>
+		<br> <br>
+		<input type="checkbox" name="uppercase" style="font-family: 'Lato', sans-serif;"/> Uppercase letters
+		<br> <br>
+		<input type="checkbox" name="numbers" style="font-family: 'Lato', sans-serif;"/> Numbers
+		<br> <br>
+		<input type="checkbox" name="specialchars" style="font-family: 'Lato', sans-serif;"/> Special Characters
+		<br> <br>
+		<input type="submit" value="Generate Password" class="btn btn-primary"/>
+	</form>
+</div>
+
+<div align="center">
+	<form action="{% url 'about' %}">
+		<input type="submit" value="About this website" class="btn btn-primary"/>
+	</form>
+</div>
